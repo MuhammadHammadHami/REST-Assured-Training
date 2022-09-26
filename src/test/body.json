@@ -1,0 +1,13 @@
+{
+  "environment": {
+    "name": "environmentByJsonFile",
+    "values": [
+      {
+        "key": "baseURL",
+        "value": "255.255.255.255",
+        "enabled": true,
+        "type": "default"
+      }
+    ]
+  }
+}

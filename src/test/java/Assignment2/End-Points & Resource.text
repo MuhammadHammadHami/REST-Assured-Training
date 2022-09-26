@@ -1,0 +1,6 @@
+End-Points & Resource
+- Resources are the subset on end points
+- An end point by itself is the collective results agains the service
+- Resource the it self is the specific user results agains the service
+- Example of End-point: https://reqres.in/api/
+- Example of Resource: https://reqres.in/api/users/2
