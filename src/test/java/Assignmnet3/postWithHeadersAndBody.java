@@ -12,7 +12,7 @@ import java.util.Map;
 
 import static io.restassured.RestAssured.*;
 
-public class postWithHeadersAndBody extends Assignmnet3.base5 {
+public class postWithHeadersAndBody extends Assignmnet3.base {
 
     @Test
     public void createWorkSpace() {
