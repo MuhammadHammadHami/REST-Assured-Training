@@ -8,8 +8,7 @@ import static io.restassured.RestAssured.baseURI;
 public class base5 {
     @BeforeClass
     public static void setup() {
-
-        baseURI = "http://3.13.86.142:3000";
-        basePath = "/contacts";
+        baseURI = "https://api.getpostman.com/";
+        basePath = "environments/";
     }
 }
