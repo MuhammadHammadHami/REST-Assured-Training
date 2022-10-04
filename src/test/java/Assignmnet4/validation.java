@@ -180,7 +180,7 @@ public class validation extends base4 {
     }
 
     public Response getRequese(){
-        Response response = (Response) given()
+        Response response =  given()
                 .header("X-Api-Key", "PMAK-632aba8d48f28a7ef851d9b7-48186fb26e5ef9e984d6f778271e80fd96")
                 .header("Content-Type", "application/json; charset=utf-8")
                 .pathParam("uid", "23427049-f050eb00-b3ca-4e0d-aeb8-d9a0d2c1b435")

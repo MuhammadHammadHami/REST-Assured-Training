@@ -46,18 +46,19 @@ public class pojo extends base5 {
 
         Response req = RestAssured
                 .given()
-                .baseUri(baseURI)
-                .basePath(basePath+"/6332d116e48c43062f42aca5")
-//                .pathParam("_id","/6332d116e48c43062f42aca5")
+                .baseUri("http://3.13.86.142:3000")
+                .basePath("/contacts"+"/63340d0ae48c43062f42b09b")
+
                 .contentType(ContentType.JSON)
                 .get();
 
 
 
         userList responseBody = req.body().as(userList.class);
-        System.out.println(responseBody.getFirstName());
-        System.out.println(responseBody.getLastName());
-        System.out.println(responseBody.getEmail());
+        System.out.println("User id: "+ responseBody.getId());
+        System.out.println("User first name: "+responseBody.getFirstName());
+        System.out.println("User last name: "+responseBody.getLastName());
+        System.out.println("User email: "+responseBody.getEmail());
 
     }
 

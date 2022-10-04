@@ -8,7 +8,7 @@ import static io.restassured.RestAssured.baseURI;
 public class base5 {
     @BeforeClass
     public static void setup() {
-        baseURI = "https://api.getpostman.com/";
-        basePath = "environments/";
+        baseURI = "https://reqres.in/";
+        basePath = "/api/users/";
     }
 }
