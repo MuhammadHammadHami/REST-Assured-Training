@@ -5,6 +5,8 @@ import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.testng.annotations.Test;
 
+import static org.hamcrest.core.IsEqual.equalTo;
+
 public class test {
     @Test
     public void GetRequest(){
@@ -40,7 +42,9 @@ public class test {
                 .when().contentType(ContentType.JSON)
                 .body(body)
                 .post()
-                .then().extract().statusCode();
+                .then().assertThat().statusCode(201)
+                .assertThat().header("Content-Type",equalTo("application/json; charset=utf-8"))
+                .extract().statusCode();
 
         System.out.println(responseCode);
 
@@ -49,7 +53,9 @@ public class test {
                 .when().contentType(ContentType.JSON)
                 .body(body)
                 .post()
-                .then().extract().body().asString();
+                .then().assertThat().body("name", equalTo("Hammad")).body("job", equalTo("SQA"))
+                //.assertThat().body("job", equalTo("SQA"))
+                .extract().body().asString();
 
         System.out.println(responseBody);
     }
