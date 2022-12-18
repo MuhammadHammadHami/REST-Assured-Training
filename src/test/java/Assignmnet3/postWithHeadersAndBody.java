@@ -23,7 +23,7 @@ public class postWithHeadersAndBody extends Assignmnet3.base {
                 .when()
                 .body("{\n" +
                         "    \"workspace\": {\n" +
-                        "        \"name\": \"HammadWorkSpace\",\n" +
+                        "        \"name\": \"HammadWorkSpaceNew\",\n" +
                         "        \"description\": \"This is a demo workspace\",\n" +
                         "        \"type\": \"personal\"\n" +
                         "    }\n" +

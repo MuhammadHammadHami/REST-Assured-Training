@@ -17,9 +17,14 @@ public class test {
                 .then()
                  .log().body();
 
-        //extract().response().asString();
-
-       // System.out.println(responseBody);
+//       String responseBody = RestAssured.given().log().all().basePath("users")
+//                .header("Content-Type","application/json")
+//                .when()
+//                .get()
+//                .then()
+//                .extract().body().asString();
+//
+//        System.out.println(responseBody);
     }
 
     @Test
@@ -28,8 +33,8 @@ public class test {
         RestAssured.baseURI = "https://reqres.in/api/";
 
         String body = "{\n" +
-                "    \"name\": \"morpheus\",\n" +
-                "    \"job\": \"leader\"\n" +
+                "    \"name\": \"Hammad\",\n" +
+                "    \"job\": \"SQA\"\n" +
                 "}";
         int responseCode = RestAssured.given().basePath("users")
                 .when().contentType(ContentType.JSON)
