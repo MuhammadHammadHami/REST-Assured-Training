@@ -170,9 +170,8 @@ public class validation extends base4 {
         String contentType = response.getContentType();
         int statusCode = response.getStatusCode();
 
-
-        Allure.step(contentType);
-
+        Allure.step("Content-Type: "+contentType);
+        Allure.step("Status Code: "+statusCode);
 
         Assert.assertEquals(statusCode,200);
         Assert.assertEquals(contentType,"application/json; charset=utf-8");

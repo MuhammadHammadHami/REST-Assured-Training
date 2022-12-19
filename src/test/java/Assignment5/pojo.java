@@ -46,19 +46,19 @@ public class pojo extends base5 {
 
         Response req = RestAssured
                 .given()
-                .baseUri("http://3.13.86.142:3000")
-                .basePath("/contacts"+"/63340d0ae48c43062f42b09b")
+//                .baseUri("http://3.13.86.142:3000")
+//                .basePath("/contacts"+"/63340d0ae48c43062f42b09b")
+                .baseUri(baseURI)
+                .basePath(basePath+"2")
 
                 .contentType(ContentType.JSON)
                 .get();
 
-
-
         userList responseBody = req.body().as(userList.class);
-        System.out.println("User id: "+ responseBody.getId());
-        System.out.println("User first name: "+responseBody.getFirstName());
-        System.out.println("User last name: "+responseBody.getLastName());
-        System.out.println("User email: "+responseBody.getEmail());
+        System.out.println("User id: "+ responseBody.getData().getId());
+        System.out.println("User first name: "+responseBody.getData().getFirstName());
+        System.out.println("User last name: "+responseBody.getData().getLastName());
+        System.out.println("User email: "+responseBody.getData().getEmail());
 
     }
 
@@ -68,7 +68,6 @@ public class pojo extends base5 {
         createUser body = new createUser();
         body.setName("Hammad");
         body.setJob("Tester");
-
 
         Response req = RestAssured
                 .given()
